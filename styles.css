@@ -1,86 +1,181 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%; 
-    background-color: #333;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #f4f4f4;
 }
 
 header {
-    background-color: bisque;
+    background-color: #ffebcd;
     padding: 20px;
     text-align: center;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.header-cards-container {
+/* styles.css */
+
+.header-content {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    flex: 1;
-    align-items: center;
+    justify-content: center; /* Center the heading container */
+    align-items: center; /* Center items vertically */
+    position: relative; /* To position the button absolutely */
+    padding: 0 20px; /* Add some padding if needed */
 }
 
-.header-card1 {
-    position: relative;
-    width: 25%;
-    height: 500px;
-    perspective: 1000px;
+.header-heading {
+    flex: 1; /* Allows the heading to take up available space */
+    text-align: center; /* Center the text within the heading container */
 }
 
-.card-inner {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.5s;
-    transform-style: preserve-3d;
+.coffee-button {
+    display: inline-block;
+    background-color: #ff813f; /* Adjust color as needed */
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute; /* Position button absolutely */
+    right: 20px; /* Adjust distance from the right edge */
+    top: 50%; /* Align vertically centered */
+    transform: translateY(-50%); /* Adjust for vertical centering */
 }
 
-.card-content, .card-hover-content {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
+.coffee-button:hover {
+    background-color: #e67e22; /* Darker shade for hover effect */
 }
 
-.card-content {
-    background-color: #f4f4f4;
-    z-index: 2;
+.coffee-button i {
+    margin-right: 8px;
 }
 
-.card-hover-content {
-    background-color: #e0e0e0;
+h1 {
+    margin: 0;
     color: #333;
-    transform: rotateY(180deg);
-    opacity: 0;
-    transition: opacity 0.5s;
 }
 
-.header-card1:hover .card-inner {
-    transform: rotateY(180deg);
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 }
 
-.header-card1:hover .card-hover-content {
-    opacity: 1;
+.sub-header-container {
+    display: flex;
+    gap: 20px;
 }
+
+.sub-header-bot {
+    font-size: 20px;
+    color: #333;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .sub-header-bot {
+        font-size: 18px;
+    }
+}
+
+.sub-header-bot {
+    font-size: 20px;
+    color: #333;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center; /* Center text and image */
+}
+
+.sub-header-bot img.axo-bot-image {
+    max-width: 10%; /* Ensure image scales responsively */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: adds a rounded border */
+    margin: 10px 0; /* Space around image */
+}
+
+/* Adjust if necessary for responsiveness */
+@media (max-width: 768px) {
+    .sub-header-bot {
+        font-size: 18px;
+    }
+}
+
+
+.sub-header {
+    font-size: 24px;
+    color: #333;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.sub-header-large {
+    font-size: 18px;
+    color: #333;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 2;
+}
+
+.sub-header-large h3 {
+    margin-top: 0;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.social-links li {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+
+.social-links i {
+    margin-right: 8px;
+}
+
 
 footer {
-    background-color:bisque;
-    padding: 20px;
+    background-color: #ffebcd;
+    padding: 10px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     text-align: center;
-    margin-top: auto;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    bottom: 0;
+    width: 100%;
 }
