@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>axo</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHq6klKZqVz5YxURgWXmB+yDqjJkFgEj76iJzqF1TqXKZgLKr93KjY4l1Q0qX4nAKlRgDf2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
@@ -16,13 +17,25 @@
             <a href="https://www.buymeacoffee.com/axolott" target="_blank" rel="noopener noreferrer" class="coffee-button">
                 <i class="fas fa-coffee"></i> Buy Me a Coffee
             </a>
+            <!-- Theme Toggle Switch -->
+            <div class="theme-switcher">
+                <input type="checkbox" id="theme-toggle" />
+                <label for="theme-toggle" class="toggle-label">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <span class="toggle-ball"></span>
+                </label>
+            </div>
         </div>
     </header>
     
-    <div class="content">
-        <div class="sub-header-container">
-            <header class="sub-header"><h2>Hello! I am axo</h2><br><h4>I am a Youtuber and a streamer. I have experience in 3D modeling and programming</h4></header>
-            <header class="sub-header-large">
+    <main class="content">
+        <section class="introduction">
+            <header class="sub-header">
+                <h2>Hello! I am axo</h2>
+                <h4>I am a YouTuber and a streamer. I have experience in 3D modeling and programming.</h4>
+            </header>
+            <div class="social-connect">
                 <h3>Connect with me:</h3>
                 <ul class="social-links">
                     <li><a href="https://x.com/axolott__" target="_blank" rel="noopener noreferrer"><i class="fab fa-x"></i> x.com/axolott__</a></li>
@@ -31,23 +44,34 @@
                     <li><a href="https://discord.com/users/axolott__" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i> Discord: axolott__</a></li>
                     <li><a href="https://discord.gg/zhVTQJmKWc" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i> Join my server</a></li>
                 </ul>
-            </header>
-        </div>
-        <header class="sub-header-bot">
-            <h3>Meet Axo Bot</h3>
-            <img src="07dfc19eab8a41a1b22dcea707eda6ea.png" alt="Axo Bot" class="axo-bot-image">
-            <p>Axo Bot is a Discord Bot made by axo! A fun and useful bot for your server.</p>
-            <li><a href="https://discord.com/oauth2/authorize?client_id=1242173825697845388&permissions=8&integration_type=0&scope=bot+applications.commands" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i>Invite Axo Bot to your server!</a></li>
-            <li><a href="https://github.com/axobottled/axo-bot" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i>Axo Bot source code</a></li>
-        </header>
-        <header class="sub-header-bot">
-            <img src="axo.png" alt="axo" class="axo-bot-image">
-            <p>Join our friendly and awesome community!</p>
-            <li><a href="https://discord.gg/zhVTQJmKWc" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i> Join the server!</a></li>
-        </header>
-    </div>
+            </div>
+        </section>
+        
+        <section class="bots-section">
+            <div class="bot-card">
+                <h3>Meet Axo Bot</h3>
+                <img src="07dfc19eab8a41a1b22dcea707eda6ea.png" alt="Axo Bot" class="axo-bot-image">
+                <p>Axo Bot is a Discord Bot made by axo! A fun and useful bot for your server.</p>
+                <ul class="bot-links">
+                    <li><a href="https://discord.com/oauth2/authorize?client_id=1242173825697845388&permissions=8&integration_type=0&scope=bot+applications.commands" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i> Invite Axo Bot</a></li>
+                    <li><a href="https://github.com/axobottled/axo-bot" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Source Code</a></li>
+                </ul>
+            </div>
+            <div class="bot-card">
+                <img src="axo.png" alt="axo" class="axo-bot-image">
+                <p>Join our friendly and awesome community!</p>
+                <ul class="bot-links">
+                    <li><a href="https://discord.gg/zhVTQJmKWc" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i> Join the server!</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
     <footer>
-        <p>&copy; 2024 axo. All rights reserved</p>
+        <p>&copy; 2024 axo. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript for Theme Switching -->
+    <script src="script.js"></script>
 </body>
 </html>
