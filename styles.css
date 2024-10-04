@@ -78,7 +78,7 @@ header {
     align-items: center;
     transition: background-color 0.3s;
     position: absolute;
-    right: 1000px; /* Positioned on the right */
+    left: 20px; /* Positioned on the right */
 }
 
 .coffee-button:hover {
