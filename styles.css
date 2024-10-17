@@ -51,10 +51,11 @@ header {
 .header-content {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between; /* Changed to space-between */
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .header-heading {
@@ -77,8 +78,7 @@ header {
     display: flex;
     align-items: center;
     transition: background-color 0.3s;
-    position: absolute;
-    left: 20px; /* Positioned on the right */
+    margin-top: 10px; /* Add some space above on smaller screens */
 }
 
 .coffee-button:hover {
@@ -90,8 +90,8 @@ header {
 }
 
 .theme-switcher {
-    position: absolute;
-    right: 20px;
+    position: relative; /* Changed from absolute to relative */
+    margin-top: 10px; /* Add space above */
 }
 
 .theme-switcher input {
@@ -286,4 +286,16 @@ footer {
     padding: 15px;
     text-align: center;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 600px) {
+    .header-content {
+        flex-direction: column; /* Stack header items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .coffee-button {
+        margin-top: 10px; /* Ensure spacing between items */
+    }
 }
